@@ -2,8 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-use App\Controllers\HelloWorldController;
-
 function autoloader($class) {
     // $includeString = "/var/www/mvc/app/controllers/" . $class . '.php';
     $includeString = str_replace('\\', '/', $class) . '.php';
@@ -32,7 +30,9 @@ if (!is_null($controller) && !is_null($method)) {
 
     // $obj = new $controller();
     //  include 'App/Controllers/HelloWorldController.php';
-     $obj = new HelloWorldController();
+    $class = 'App\\Controllers\\' . $controller;
+
+    $obj = new $class();
     $obj->$method();
 }
 
