@@ -10,7 +10,7 @@ function autoloader($class) {
         include $includeString;
         echo "<br>including...<br>";
     } else {
-        echo $includeString . "file not exist<br>";
+        echo "<b>" . $includeString . " file not exist</b><br>";
     }
 }
 
