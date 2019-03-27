@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+use App\Utility\Env;
+
 function autoloader($class) {
     // $includeString = "/var/www/mvc/app/controllers/" . $class . '.php';
     $includeString = str_replace('\\', '/', $class) . '.php';
@@ -15,6 +17,8 @@ function autoloader($class) {
 }
 
 spl_autoload_register('autoloader');
+
+Env::loadEnvFromFile();
 
 $url = $_SERVER["REQUEST_URI"];
 $params = explode('/', $url);
