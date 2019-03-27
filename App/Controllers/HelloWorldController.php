@@ -8,6 +8,6 @@ class HelloWorldController extends Controller {
     
     public function index() {
         //echo "<br><b>Hello World Controller + Index method</b><br>";
-        return new View('HelloWorld/index.html');
+        return new View('HelloWorld/index.php', ['param1' => 'paramVal1']);
     }
 }

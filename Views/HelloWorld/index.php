@@ -9,6 +9,13 @@
             <p>
                 <b>It's test page!</b>
             </p>
+            <p>
+                <pre>
+                    <?php
+                        var_dump($this->params)
+                    ?>
+                </pre>
+            </p>
         </div>
     </body>
 </html>
