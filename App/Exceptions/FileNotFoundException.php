@@ -21,14 +21,6 @@ class FileNotFoundException extends Exception {
         $this->fileTarget = $file;
     }
 
-    public function errorMessage() {
-        var_dump("errorMessage");
-       $msg = '<b>File not found: '. $this->fileTarget . '</b><br>Error on line ' . 
-                $this->getLine() . ' in ' . $this->getFile() . ': <b>' . 
-                $this->getMessage() . '</b>';
-       return $msg;
-    }
-
     public function __toString() {
         return "File not found: " . $this->fileTarget;
     }

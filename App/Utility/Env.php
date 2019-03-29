@@ -13,7 +13,7 @@ class Env {
         
         foreach ($lines as $line) {
             if ($line != "") {
-                echo $line . "<br>";                
+                //echo $line . "<br>";                
                 putenv(trim($line));
             }
         }

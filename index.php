@@ -7,10 +7,10 @@ use App\Utility\Env;
 function autoloader($class) {
     // $includeString = "/var/www/mvc/app/controllers/" . $class . '.php';
     $includeString = str_replace('\\', '/', $class) . '.php';
-    echo "<br>" . $includeString . "<br>";
+    // echo "<br>" . $includeString . "<br>";
     if (file_exists($includeString)) {
         include $includeString;
-        echo "<br>including...<br>";
+        // echo "<br>including...<br>";
     } else {
         echo "<b>" . $includeString . " file not exist</b><br>";
     }
@@ -28,8 +28,8 @@ $method = isset($params[2]) ? $params[2] : null;
 
 
 if (!is_null($controller) && !is_null($method)) {
-    var_dump($controller);
-    var_dump($method);
+    // var_dump($controller);
+    // var_dump($method);
 
 
     // $obj = new $controller();

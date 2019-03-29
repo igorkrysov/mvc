@@ -71,7 +71,7 @@ abstract class Migration {
 
     protected function run() {
         $this->prepareQuery();
-        echo "\n\nQUERY: $this->query\n\n";
+        //echo "\n\nQUERY: $this->query\n\n";
 
        if ($this->query == "") {
            throw new Exception("Wrong query: " . $this->query);
